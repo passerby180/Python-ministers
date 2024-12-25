@@ -1,0 +1,43 @@
+# 1-topshiriq 
+#5 ning 4-darajasini toping
+
+# 5 ning 4 chi darajasini hisoblash
+natija=5**4 # (**) amali bizga darajaga oshirish imkonini beradi
+print(natija) # print bizga hisoblanagan natijani oynaga chiqarib beradi
+
+
+# 2-topshiriq 
+#22 ni 4 ga bo'lganda qancha qoldiq qoladi?
+
+# 22 ni 4 ga bolganda necha qoldiq qolishini hisoblash
+natija=22%4 # (%) bizga bu amal qoldiqli bolishga kerak
+print(natija) # bizga javobni chiqarib beradi
+
+
+# 3-topshiriq
+#Tomonlari 125 ga teng kvadratning yuzi va perimetrini toping
+
+# Tomonlari 125 ga teng kvadratning yuzi va perimetrini hisoblash
+t=125
+perimetr=t*4 # p=a*4
+yuza=t**2 # s=a**2
+print("perimetr= ", perimetr, "yiza =", yuza) # perimetr=500 yuza=15625
+
+
+# 4-topshiriq
+# Diametri 12 ga teng bo'lgan doiraning yuzini toping  (π=3.14 deb oling)
+
+# diametiri 12 bolgan doirani yizasini hisoblash
+r=12/2
+p=3.14 # π=3.14 deb oldik
+yuza=p*(r**2) #doirani yizasini formulasi s=π*a**2
+print(yuza) # 113.04
+
+# 5-topshiriq
+#Katetlari 6 va 7 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasini toping (Pifagor teoremasidan foydalaning)
+
+# Katetlari 6 va 7 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasini hisoblash
+a=6
+b=7
+c=((a**2)+(b**2))**0.5 # formula c = √(a² + b²)
+print(c) # 9.219
