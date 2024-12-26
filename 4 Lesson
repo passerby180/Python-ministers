@@ -1,0 +1,61 @@
+# 1-topshiriq
+#Quyidagi o'zgaruvchilarni yarating: 
+
+kocha="Bog'bon"
+mahalla="Sog'bon"
+tuman="Bodomzor" 
+viloyat="Samarqand"
+
+
+# 2-topshiriq
+#Yuqoridagi o'zgaruvchilarni jamlab, quyidagi ko'rinishda konsolga chiqaring:
+#Bog'bon ko'chasi, Sog'bon mahallasi, Bodomzor tumani, Samarqand viloyati
+
+kocha="Bog'bon"
+mahalla="Sog'bon"
+tuman="Bodomzor" 
+viloyat="Samarqand"
+print(f"{kocha} ko'chasi, {mahalla} mahallasi, {tuman} tumani, {viloyat} viloyati")
+
+
+# 3-topshiriq
+#Yuqoridagi o'zgaruvchilarning (kocha, mahalla, tuman, viloyat) qiymatini foydalanuvchidan so'rang. Va avvalgi mashqni takrorlang.
+
+kocha=input("Ko'changizning nomi nima: ")
+mahalla=input("Mahallangizning nomi nima: ")
+tuman=input("Tumanningining nomi nima: ")
+viloyat=input("Viloyatingizning nomi nima: ")
+print(f"{kocha} ko'chasi, {mahalla} mahallasi, {tuman} tumani, {viloyat} viloyati")
+
+
+# 4-tipshiriq
+#Yuqoridagi matnni konsolga chiqarishda har bir verguldan keyin yangi qatordan yozing
+
+kocha=input("Ko'changizning nomi nima: ")
+mahalla=input("Mahallangizning nomi nima: ")
+tuman=input("Tumanningining nomi nima: ")
+viloyat=input("Viloyatingizning nomi nima: ")
+print(kocha + " ko'chasi,\n" + mahalla + " mahallasi,\n" + \
+      tuman + " tumani,\n" + viloyat + " viloyati")
+
+
+# 5-topshiriq
+#Yuqoridagi o'zgaruvchilarni f-string yordamida, yangi, manzil deb nomlangan o'zgaruvchiga yuklang
+
+kocha=input("Ko'changizning nomi nima: ")
+mahalla=input("Mahallangizning nomi nima: ")
+tuman=input("Tumanningining nomi nima: ")
+viloyat=input("Viloyatingizning nomi nima: ")
+manzil=f"{kocha:<5} ko'chasi,\n{mahalla:<5} mahallasi,\n{tuman:<5} tumani,\n{viloyat:<5} viloyati."
+print(manzil)
+
+
+# 6-topshiriq
+manzilga biz yuqorida o'rgangan title(), upper(), lower() , capitalize() metodlarini qo'llab ko'ring.
+
+kocha=input("Ko'changizning nomi nima: ").title()
+mahalla=input("Mahallangizning nomi nima: ").upper()
+tuman=input("Tumanningining nomi nima: ").lower()
+viloyat=input("Viloyatingizning nomi nima: ").capitalize()
+manzil=f"{kocha:<5} ko'chasi,\n{mahalla:<5} mahallasi,\n{tuman:<5} tumani,\n{viloyat:<5} viloyati."
+print(manzil)
