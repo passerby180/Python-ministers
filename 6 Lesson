@@ -1,0 +1,75 @@
+# ismlar degan ro'yxat yarating va kamida 3 ta yaqin do'stingizning ismini kiriting
+
+ismlar=[]
+ismlar.append("Islombek")
+ismlar.append("Ibrohimjon")
+ismlar.append("Saidjahon")
+print(ismlar)
+
+
+# Ro'yxatdagi har bir do'stingizga qisqa xabar yozib konsolga chiqaring: 
+
+print("Salom " + ismlar[0] + " yaxshimisan?")
+print(f"{ismlar[1]} o'qish qachon bashlanadi ekan?")
+print(ismlar[2] + " telefon qilib yubor")
+
+
+# sonlar deb nomlangan ro'yxat yarating va ichiga turli sonlarni yuklang (musbat, manfiy, butun, o'nlik). 
+
+sonlar=[-5, 10, 20, 0, -20]
+
+
+# Yuqoridagi ro'yxatdagi sonlar ustida turli arifmetik amallar bajarib ko'ring. Ro'yxatdagi ba'zi sonlarning qiymatini o'zgartiring, ba'zilarini esa almashtiring. 
+
+sonlar=[-5, 10, 20, 0, -20]
+narx=sonlar[1]+sonlar[2]
+sonlar.append(50)
+sonlar[0]=123
+print(sonlar)
+print(narx)
+
+
+#t_shaxslarva z_shaxslar degan 2 ta ro'yxat yarating va biriga o'zingiz eng ko'p hurmat qilgan tarixiy shaxslarning, ikkinchisiga esa zamonamizdagi tirik bo'lgan shaxslarning ismini kiriting. 
+
+t_shaxslar=["Amur Temur", "Alisher Navoiy", "Al-Xorazmiy", "Zahiriddin Muhammad Bobur"]
+z_shaxslar=["Pavel Durov", "Inlon Musk", "Ciristiono Ranaldo"]
+
+
+# Yuqoridagi ro'yxatlarning har biridan bittadan qiymatni sug'urib olib (.pop()), quyidagi ko'rinishda chiqaring:
+
+y_t_shaxs=t_shaxslar.pop(0)
+y_z_shaxs=z_shaxslar.pop(0)
+print("Men tarixiy shaxs bo'lmish " + y_t_shaxs + "bilan yoki zamonaviy shaxs " + y_z_shaxs + " bilan suhbat qilishni hohlar edim.")
+
+
+#friendsnomli bo'sh ro'yxat tuzing va unga .append() yordamida 5-6 ta mehmonga chaqirmoqchi bo'lgan do'stlaringizni kiriting. 
+
+frends=[]
+frends.append("Islombek")
+frends.append("Saidjahon")
+frends.append("Ibrohimjon")
+frends.append("Abu Bakkir Siddiq")
+frends.append("Jahongir")
+
+
+# Yuqoridagi ro'yxatdan mehmonga kela olmaydigan odamlarni .remove() metodi yordamida o'chrib tashlang. 
+
+frends=['Islombek', 'Saidjahon', 'Ibrohimjon', 'Abu Bakkir Siddiq', 'Jahongir']
+frends.remove('Islombek')
+print(frends)
+
+
+# Ro'yxatning oxiriga, boshiga va o'rtasiga yangi ismlar qo'shing.
+
+frends=['Islombek', 'Saidjahon', 'Ibrohimjon', 'Abu Bakkir Siddiq', 'Jahongir']
+frends.insert(1, 'Muhammad Yusuf')
+frends.append('Bahromjon')
+frends.insert(4, "Bahoviddin")
+print(frends)
+
+
+# Yangi mehmonlardeb nomlangan bo'sh ro'yxat yarating. .pop() va .append() metodlari yordamida mehmonga kelgan do'stlaringizning ismini friends ro'yxatidan sug'urib olib, mehmonlar ro'yxatiga qo'shing.
+
+mehmonlar.append(frends.pop(1))
+mehmonlar.append(frends.pop(-1))
+print(mehmonlar)
