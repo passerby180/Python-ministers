@@ -1,0 +1,70 @@
+# Foydalanuvchidan juft son kiritishni so'rang. Agar foydalanuvchi juft son kiritsa "Rahmat!", agar toq son kiritsa "Bu son juft emas" degan xabarni chiqaring.
+
+son=int(input("Juft son kiriting>>>"))
+if son % 2 == 0:
+    print("Raxmat")
+else:
+    print("Bu son juft emas")   
+
+
+# Foydalanuvchi yoshini so'rang, va muzeyga kirish uchun chipta narhini quyidagicha chiqaring: Agar foydalanuvchi 4 yoshdan kichkina yoki 60 dan katta bo'lsa bepul Agar foydalanuvchi 18 dan kichik bo'lsa 10000 so'm Agar foydalanuvchi 18 dan katta bo'lsa 20000 so'm  
+
+yosh=int(input("Yoshingizni kiriting>>>"))
+if yosh <= 4 or yosh >= 60:
+    print("Sizga bepul")
+elif yosh < 18:
+    print("Sizga 10 min so'm")
+else:
+    print("Sizga 20 min so'm")       
+
+
+# Foydalanuvchidan ikita son kiritishni so'rang, sonlarni solishtiring va ularning teng yoki katta/kichikligi haqida xabarni chiqaring
+
+a=float(input("1-sonni kiriting>>>"))
+b=float(input("2-sonni kiriting>>>"))
+if a>b:
+    print(a, ">", b)
+elif a<b:
+    print(a, "<", b)
+else:
+    print(a, "=", b)    
+
+
+# mahsulotlar degan ro'yxat yarating va kamida 10 ta turli mahsulotni kiriting. Yangi, savat degan bo'sh ro'yxat yarating va foydalanuvchidan savatga kamida 5 ta mahsulot kiritishni so'rang. Savatdagi elementlarni, mahsulotlar ro'yxati bilan solishtiring va qaysi biri ro'yxatda bo'lsa "Mahsulot do'konimizda bor" aks holda, "Mahsulot do'konimizda yo'q" degan xabarlarni chiqaring.
+
+maxsulotlar=["olma", "nok", "bexi", "tarvuz", "qovun", "gilos", "qulupnay", "mandarin", "banan", "uzum"]
+savat=[]
+savat.append(input("1-chi meva>>>").lower())
+savat.append(input("2-chi meva>>>").lower())
+savat.append(input("3-chi meva>>>").lower())
+savat.append(input("4-chi meva>>>").lower())
+savat.append(input("5-chi meva>>>").lower())
+for maxsulot in savat:
+    if maxsulot in maxsulotlar:
+        print("dokonimizda", maxsulot, "bor")
+    else:
+        print("dokonimizda", maxsulot, "yo'q")
+
+
+# foydalanuvchilar degan ro'yxat tuzing, va kamida 5 ta login qo'shing. Foydalanuvchidan yangi login tanlashni so'rang va foydalanuvchi kiritgan loginni foydalanuvchilar degan ro'yxatning tarkibi bilan solishtiring. Agar ro'yxatda bunday login mavjud bo'lsa, "Login band, yangi login tanlang!" aks holda "Xush kelibsiz, foydalanuvchi!" xabarini chiqaring.
+
+foydalanuvchilar=["bahromjon", "anvar", "tohir", "jahon", "dilshod"]
+login=input("foydalanuvchi login kiriting>>>").lower()
+if login in foydalanuvchilar:
+    print("Xush kelibsiz")
+    yangi=input("Yangi login kiriting>>>").lower()
+    if yangi in foydalanuvchilar:
+        print("Bu login band")
+    else:
+        foydalanuvchilar.append(yangi)
+        print("Logon qoshildi")
+else:
+    print("Bunday logon mavjud emas")            
+
+
+    # Foydalanuvchidan biror butun son kiritishni so'rang. Foydalanuvchi kiritgan sonni 2 da 10 gacha bo'lgan sonlardan qay biriga qoldiqsiz bo'linishini konsolga chiqaring. 
+
+    son=int(input("Butun son kiriting>>>"))
+for i in range(2,12):
+    if son % i == 0:
+        print(son, "bo'linadi", i, "ga")
