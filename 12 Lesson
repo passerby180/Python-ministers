@@ -1,0 +1,75 @@
+# otam (onam, akam, ukam, va hokazo) degan lug'at yarating va lug'atga shu inson haqida kamida 3 ta m'alumot kiriting (ismi, tu'gilgan yili, shahri, manzili va hokazo). Lug'atdagi ma'lumotni matn shaklida konsolga chiqaring 
+
+love={
+    "ism":"******xon",
+    "tugilgan_yili":"****",
+    "joyi":"****** viloyati"}
+print(f"Ismi {love['ism']}, {love['tugilgan_yili']}-da tig'ilgan, {love['joyi']} da tug'ilgan")    
+
+
+# Oila a'zolaringizning sevimli taomlari lug'atini tuzing. Lug'atda kamida 5 ta ism-taom jufltigi bo'lsin. Kamida uch kishining sevimli taomini konsolga chiqaring: 
+taomlar={
+    "bahromjon":"bishteks",
+    "islombek":"somsa",
+    "saidjahon":"kabob",
+    "ibrohimjon":"laman",
+    "bekzod":"monti"}
+taom=taomlar["bahromjon"]
+print(f"Bahromjonning sevimli taomi {taom}")   
+
+
+# Python izohli lu'gati tuzing: Lug'atga shu kunga qadar o'rgangan 10 ta so'z (atamani) kiriting (masalan integer, float, string, if, else va hokazo) va har birining qisqacha tarjimasini yozing.
+
+sozlar={
+    "if":"agar",
+    "else":"aks holda",
+    "else":"aks holda agar",
+    "for":"takrorlash operatori",
+    "str":"matn ko'rinishidagi o'zgaruvchi",
+    "int":"butun son",
+    "float":"haqiyqiy son",
+    "while":"takrorlash operatori",
+    "or":"ikkita shartdan bittaso togri bolsa trou",
+    "and":"ikkala shart ham togri bolsa trou"
+    }
+print(sozlar["if"])    
+
+
+# Foydalanuvchidan biror so'z kiritishni so'rang va so'zning tarjimasini yuqoridagi lug'atdan chiqarib bering. Agar so'z lu'gatda mavjud bo'lmasa, "Bunda so'z mavjud emas" degan xabarni chiqaring.
+
+sozlar={
+    "if":"agar",
+    "else":"aks holda",
+    "elif":"aks holda agar",
+    "for":"takrorlash operatori",
+    "str":"matn ko'rinishidagi o'zgaruvchi",
+    "int":"butun son",
+    "float":"haqiyqiy son",
+    "while":"takrorlash operatori",
+    "or":"ikkita shartdan bittaso togri bolsa trou",
+    "and":"ikkala shart ham togri bolsa trou"
+    }
+soz=input("Bilmoqchi bo'lgan so'zingizni kiriting>>>").lower()
+print(sozlar.get(soz, Bunday soz mavjud emas"))
+
+
+# Yuqoridagi vazifani if-else yordamida qiling va natijani ham foydalanuvchiga tushunarli ko'rinishda chiqaring.
+
+sozlar={
+    "if":"agar",
+    "else":"aks holda",
+    "elif":"aks holda agar",
+    "for":"takrorlash operatori",
+    "str":"matn ko'rinishidagi o'zgaruvchi",
+    "int":"butun son",
+    "float":"haqiyqiy son",
+    "while":"takrorlash operatori",
+    "or":"ikkita shartdan bittaso togri bolsa trou",
+    "and":"ikkala shart ham togri bolsa trou"
+    }
+soz=input("So'zni kiriting>>>")
+tarjima=sozlar.get(soz, "Bunday soz mavjud emas")
+if tarjima==None:
+    print("Bunday soz mavjud emas")
+else:
+    print(soz, tarjima, "degan manoni anglatadi")   
