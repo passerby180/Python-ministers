@@ -1,0 +1,115 @@
+# Adabiyot (ilm-fan, san'at, internet) olamidagi 4 ta mashxur shaxlar haqidagi ma'lumotlarni lug'at ko'rinishida saqlang. Lug'atlarni bitta ro'yxatga joylang, va har bir shaxs haqidagi ma'lumotni konsolga chiqaring.
+
+shaxs1={
+    "ism":"Temur ibn Tarag‘ay Barlas",
+    "yil":"1336-yil",
+    "shaxar":"kesh",
+    "umr":"68"
+    }
+shaxs2={
+    "ism":"Abu Ali al-Husayn ibn Abdulloh ibn Sino",
+    "yil":"980-yil",
+    "shaxar":"afshona",
+    "umr":"57"
+    } 
+shaxs3={
+    "ism":"Zahiriddin Muhammad Bobur",
+    "yil":"1483-yil",
+    "shaxar":"andijon",
+    "umr":"47"
+    } 
+shaxslar=[shaxs1, shaxs2, shaxs3] 
+for shaxs in shaxslar:
+    print(f"{shaxs['ism'].title()}, {shaxs['yil']} {shaxs['shaxar'].title()}da tug'ilgan, {shaxs['umr']}yil umr ko'rgan")       
+
+
+    # Yuqoridagi lug'atlarga har bir shaxsning mashxur asarlari ro'yxatini ham qo'shing. For tsikli yordamida muallifning ismi va uning asarlarini konsolga chiqaring.
+
+    shaxslar={
+    "Temur ibn Tarag‘ay Barlas":[None],
+    "Abu Ali al-Husayn ibn Abdulloh ibn Sino":["Al-Qonun fi-t-tibb","Ash-Shifa","Al-Isharat wa-t-Tanbihat","Kitab al-Najat"],
+    "Zahiriddin Muhammad Bobur":["Boburnoma","Diwan-i Bobur","Tuzuk-i Baburi"]
+    }
+for ism, asarlar in shaxslar.items():
+    print(f"{ism.title()}ning quyidagi asar bor:")
+    for asar in asarlar:
+        print(asar)    
+
+
+# Oila a'zolaringiz (do'stlaringiz) dan 3 ta sevimli kino-seriali haqida so'rang. Do'stingiz ismi kalit, uning sevimli kinolarini esa ro'yxat ko'rinishida lug'artga saqlang.  Natijani konsolga chiqaring
+
+dostlar={
+    "Jon":["Sonik","Forsaj","Terminator"],
+    "Joni":["Temir Odam","Supermen","O'rgimchal odam"],
+    "Jek":["Kapitan Amerika","Uyda yolg'iz","Terminal"]
+    }
+for ism, kinolar in dostlar.items():
+    print(f"{ism.title()} quyidagi kinolarni yoqtiradi:")
+    for kino in kinolar:
+        print(kino)    
+
+
+# Davlatlar degan lug'at yarating, lug'at ichida bir nechta davlatlar haqida ma'lumotlarni lug'at ko'rinishida saqlang. Har bir davlat haqida ma'lumotni konsolga chiqaring.
+
+davlatlar={
+    "turkiya":{
+        "poytaxt":"Anqara",
+        "hudud":783572,
+        "aholisi":"85 mln",
+        "pul":"TYR"
+        },
+    "koreya":{
+        "poytaxt":"Seul",
+        "hudud":100210,
+        "aholisi":"52 mln",
+        "pul":"KRV"
+        }, 
+    "yaponiya":{
+        "poytaxt":"Tokyo",
+        "hudud":377975,
+        "aholisi":"125 mln",
+        "pul":"JPY"
+        }
+    }
+for davlat, info in davlatlar.items():
+    print(f"{davlat.title()}:")
+    print(f"Poytaxti: {info['poytaxt']}") 
+    print(f"Xudidi: {info['hudud']}")  
+    print(f"Axolisi: {info['aholisi']}") 
+    print(f"Pul birligi: {info['pul']}")
+    print(" ")         
+
+
+# Yuqoridagi dasturga o'zgartirish kiriting: konsolga barcha davlatlarni emas, foydalanuvchi so'ragan davlat haqida ma'lumot bering. Agar davlat sizning lug'atingizda mavjud bo'lmasa, "Bizda bu davlat haqida ma'lumot yo'q" degan xabarni chiqaring.
+
+davlatlar={
+    "turkiya":{
+        "poytaxt":"Anqara",
+        "hudud":783572,
+        "aholisi":"85 mln",
+        "pul":"TYR"
+        },
+    "koreya":{
+        "poytaxt":"Seul",
+        "hudud":100210,
+        "aholisi":"52 mln",
+        "pul":"KRV"
+        }, 
+    "yaponiya":{
+        "poytaxt":"Tokyo",
+        "hudud":377975,
+        "aholisi":"125 mln",
+        "pul":"JPY"
+        }
+    }
+
+dav=input("Davlat nomini kiriting>>>").lower()
+if dav in davlatlar:
+    info=davlatlar[dav]
+    print(f"{dav.title()}:")
+    print(f"Poytaxti: {info['poytaxt']}") 
+    print(f"Xudidi: {info['hudud']}")  
+    print(f"Axolisi: {info['aholisi']}") 
+    print(f"Pul birligi: {info['pul']}")
+else:
+    print("Dunday davlat haqida malumot yoq")    
