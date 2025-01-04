@@ -1,0 +1,47 @@
+# Foydalanuvchidan yaxshi ko'rgan kitoblarini kiritishni so'rang. Foydalanuvchi stop so'zini yozishi bilan dasturni to'xtating
+
+savol=("Yoqtirgan kitoringizni kiriting!")
+savol+=("Dastur tugashini istasangiz 'stop' deb yozing!>>>")
+book=""
+while book != "stop":
+    book=input(savol)
+print("Dastur tugadi")    
+
+
+# Muzeyga chipta narhi foydalanuvchining yoshiga bog'liq: 7 dan yoshlarga - 2000 so'm, 7-18 gacha 3000 so'm, 18-65 gacha 10000 so'm, 65 dan kattalarga bepul. Shunday while tsikl yozingki, dastur foydalanuvchi yoshini so'rasin va chipta narhini chiqarsin. Foydalanuvchi exit yoki quit deb yozganda dastur to'xtasin (ikkita shartni ham tekshiring).
+
+Yuqoridagi dasturni turli usullarda yozib ko'ring (break, ishora, yoki shart tekshirish)
+
+savol=("Yoshingizni kiriting!")
+savol+=("Dastur tugashini istasangiz '-1' yoki '-2' deb yozing!>>>")
+ishora=True
+while ishora:
+    yosh=input(savol)
+    if yosh == "-1" or yosh =="-2":
+        ishora=False
+    else:
+        yoshi=int(yosh)
+        if yoshi <=7:
+            print("Siz uchun chipta 2000 so'm")
+        elif yoshi <=18:
+            print("Siz uchun chipta 3000 so'm")    
+        elif yoshi <=65:
+            print("Siz uchun chipta 10000 so'm")
+        else:
+            print("Siz uchun chipta bepul")
+print("Dastur tugadi")    
+
+
+# Quyidagi dasturda bir nechta mantiqiy xatolar bor. Jumladan, xusisiy holatlarda tsikl abadiy qaytarilib qolmoqda. Xatolarni to'g'rilay olasizmi?
+
+savol=("sonni kiriting ")
+while True:
+    qiymat = input(savol)
+    if qiymat=='exit':
+        break
+    elif float(qiymat)<0:
+        continue
+    else:
+        ildiz = float(qiymat)**(0.5)
+        print(f"{qiymat} ning ildizi {ildiz} ga teng")
+print("Dastur tugadi: ")        
