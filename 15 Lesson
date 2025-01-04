@@ -17,7 +17,7 @@ yosh=''
 while yosh != 'exit' or yosh != 'quit':
     yosh=input(savol)
     if yosh == "exit" or yosh == 'quit':
-        break
+        print("Dastur tugadi")    
     else:
          if int(yosh) <= 7:
              print("Siz uchun chipta 2000 so'm")
@@ -27,7 +27,6 @@ while yosh != 'exit' or yosh != 'quit':
              print("Siz uchun chipta 10000 so'm")
          else:
              print("Siz uchun chipta bepul")
-print("Dastur tugadi")    
 
 
 # Quyidagi dasturda bir nechta mantiqiy xatolar bor. Jumladan, xusisiy holatlarda tsikl abadiy qaytarilib qolmoqda. Xatolarni to'g'rilay olasizmi?
