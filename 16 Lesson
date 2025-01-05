@@ -1,0 +1,68 @@
+# Foydalanuvchidan buyurtma qabul qiluvchi dastur yozing. Mahsulotlar nomini birma-bir qabul qilib, yangi ro'yxatga joylang.
+
+savol=f"Buytmangizni kiriting>>>"
+mahsulotlar=[]
+n=1
+while True:
+    mahsulot=input(savol)
+    mahsulotlar.append(mahsulot)
+    key=input("Yana buyurtma kiritasismi? ha/yoq>>>")
+    if key == "yoq":
+        break
+    elif key == "ha":
+        continue    
+print("Sizning mahsulotlaringiz:")
+for mah in mahsulotlar:
+    print(mah)
+print("Dastur tugadi")    
+
+
+# e-bozor uchun mahsulotlar va ularning narhlari lug'atini shakllantiruvchi dastur yozing. Foydalanuvchidan lug'atga bir nechta elementlar (mahsulot va uning narhi) kiritishni so'rang.
+
+e_bozor={}
+while True:
+    nom=input("Mahsulot nomini kiriting>>>")
+    narx=input("Mahsulot narxini kiriting>>>")
+    e_bozor[nom]=int(narx)
+    key=input("Yana kiritasismi ha/yoq>>>")
+    if key == "yoq":
+        break
+    else:
+        continue    
+for k, v in e_bozor.items():
+    print(f"{k} {v} so'm")   
+
+
+# Yuqoridagi ikki dasturni jamlaymiz. Foydalanuvchi buyurtmasi ro'yxatidagi har bir mahsulotni e-bozordagi mahsulotlar bilan solishitiring (tayyor ro'yxat ishlatishingiz mumkin). Agar mahsuot e-bozorda mavjud bo'lsa mahuslot narhini chiqaring, aks holda "Bizda bu mahsulot yo'q" degan xabarni kor'sating.
+
+e_bozor={}
+while True:
+    nom=input("Mahsulot nomini kiriting>>>")
+    narx=input("Mahsulot narxini kiriting>>>")
+    e_bozor[nom]=int(narx)
+    key=input("Yana kiritasismi ha/yoq>>>")
+    if key == "yoq":
+        break
+    else:
+        continue    
+for k, v in e_bozor.items():
+    print(f"{k} {v} so'm")
+    
+
+savol=f"Buytmangizni kiriting>>>"
+mahsulotlar=[]
+n=1
+while True:
+    mahsulot=input(savol)
+    mahsulotlar.append(mahsulot)
+    key=input("Yana buyurtma kiritasismi? ha/yoq>>>")
+    if key == "yoq":
+        break
+    elif key == "ha":
+        continue    
+print("Sizning mahsulotlaringiz:")
+for mah in mahsulotlar:
+    if mah in e_bozor:
+        print(f"{mah} {e_bozor[mah]} so'm")
+    else:
+        print(f"{mah} mavjud emas")
