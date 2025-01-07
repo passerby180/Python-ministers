@@ -1,0 +1,85 @@
+# Foydanaluvchidan ismi, familiyasi, tug'ilgan yili, tug'ilgan joyi, email manzili va telefon raqamini qabul qilib, lug'at ko'rinishida qaytaruvchi funksiya yozing. Lug'atda foydalanuvchu yoshi ham bo'lsin. Ba'zi argumentlarni kiritishni ixtiyoriy qiling (masalan, tel.raqam, el.manzil)
+
+def foydalanuvchilar_saqla():
+    foydalanuvchilar = []  # Foydalanuvchilar ro'yxati
+    ishora = True
+    
+    while ishora:
+        foydalanuvchi = {}  # Har bir foydalanuvchi uchun yangi lug'at
+        
+        # Foydalanuvchi ma'lumotlarini kiritish
+        foydalanuvchi['ism'] = input("Ismingizni kiriting>>> ").title()
+        foydalanuvchi['familiya'] = input("Familyangizni kiriting>>> ").title()
+        foydalanuvchi['yil'] = int(input("Tug'ilgan yilingizni kiriting>>> "))
+        foydalanuvchi['joy'] = input("Yashash joyingizni kiriting>>> ").title()
+        
+        # Emailni kiritish yoki "Mavjud emas" deb belgilash
+        while True:
+            sa = input("Email kiritasizmi? (yes/no)>>> ").lower()
+            if sa == "no":
+                foydalanuvchi['email'] = "Mavjud emas"
+                break
+            elif sa == "yes":
+                foydalanuvchi['email'] = input("Emaillingizni kiriting>>> ")
+                break
+        
+        # Telefon raqamini kiritish yoki "Mavjud emas" deb belgilash
+        while True:
+            sav = input("Telefon raqami kiritasizmi? (yes/no)>>> ").lower()
+            if sav == "no":
+                foydalanuvchi['raqam'] = "Mavjud emas"
+                break
+            elif sav == "yes":
+                foydalanuvchi['raqam'] = input("Raqamingizni kiriting>>> ")
+                break
+        
+        # Foydalanuvchini ro'yxatga qo'shish
+        foydalanuvchilar.append(foydalanuvchi)
+        
+        # Yana foydalanuvchi qo'shish yoki dasturdan chiqish
+        while True:
+            key = input("Yana foydalanuvchi qo'shasizmi? (yes/no)>>> ").lower()
+            if key == "no":
+                ishora = False
+                break
+            elif key == "yes":
+                print("Keyingi foydalanuvchini kiriting:")
+                break
+    
+    # Foydalanuvchilar ro'yxatini qaytarish
+    return foydalanuvchilar
+
+
+# Yuqoridagi funksiyani while yordamida bir necha bor chaqiring, va mijozlar degan ro'yxatni shakllantiring. Ro'yxatdagi mijozlar haqidagi ma'lumotni konsolga chiqaring.
+
+mijozlar=foydalanuvchilar_saqla()
+for mijoz in mijozlar:
+    print(f"Ism: {mijoz['ism']} Familiya: {mijoz['familiya']}"
+          f"Yil: {mijoz['yil']} Joy: {mijoz['joy']}"
+          f"Email: {mijoz['email']} Nomer: {mijoz['raqam']}") 
+
+
+# Uchta son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing
+
+def uchta_son(a,b,c):
+    if a>b>c:
+        print(a)
+    elif b>a>c:
+        print(b)
+    else:
+        print(c)        
+print(uchta_son(2,2,2))               
+
+
+# Foydalanuvchidan aylaning radiusini qabul qilib olib, uning radiusini, diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya yozing
+
+def radius_ol(a):
+    diametr=a*2
+    print("diametr: ", diametr)
+    perimetr=2*3.14*a
+    print("perimetr: ", perimetr)
+raqam=float(input("Radius kiriting>>>"))
+
+print(radius_ol(raqam))    
+
+
