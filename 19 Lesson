@@ -1,0 +1,40 @@
+# Matnlardan iborat ro'yxat qabul qilib, ro'yxatdagi har bir matnning birinchi harfini katta harfga o'zgatiruvchi funksiya yozing. 
+
+def katta(kirit):
+    ha=[]
+    for ki in kirit:
+        ha.append(ki.title())
+    print(ha)
+    return ha    
+ismlar=["bahromjon","islombek"]
+ha=katta(ismlar)
+
+
+# Yuoqirdagi funksiyani asl ro'yxatni o'zgartirmaydigan va yangi ro'yxat qaytaradigan qilib o'zgartiring
+
+def katta(kirit):
+    ha=[]
+    for ki in kirit:
+        ha.append(ki.title())
+    #print(ha)
+    return ha    
+ismlar=["bahromjon","islombek"]
+ha=katta(ismlar[:])
+yangi_ismlar=katta(ismlar[:])
+print(yangi_ismlar)
+print(ismlar)
+
+
+# Darsimiz davomida yozgan bahola funksiyasini .pop() metodidan foydalanmasdan va asl ro'yxatga o'zgartirish kiritmasdan faqat lug'at qaytaradigan qilib yozing.
+
+def bahola(ismlar):
+    baholar={}
+    for ism in ismlar:
+        baho=input(f"{ism.title()}ni baholang>>>")
+        baholar[ism.title()]=int(baho)
+    return baholar
+
+talabalar = ['ali', 'vali', 'hasan', 'husan']
+baholar = bahola(talabalar)
+print(baholar)
+print(talabalar)
