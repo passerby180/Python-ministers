@@ -83,3 +83,27 @@ raqam=float(input("Radius kiriting>>>"))
 print(radius_ol(raqam))    
 
 
+# Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing (tub sonlar —faqat birga va o'ziga qoldiqsiz bo'linuvchi, 1 dan katta musbat sonlar)
+
+def tub_sonlar(n):
+    for i in range(2, n + 1):
+        tub = True
+        for f in range(2, int(i**0.5) + 1):  # Ildiz orqali tekshirish
+            if i % f == 0:
+                tub = False
+                break
+        if tub:
+            print(i, end=" ")
+print(tub_sonlar(19))              # Tub sonlarni bir qatorda chiqazish
+
+
+# Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi ketma-ketligidagi sonlar ro'yxatni qaytaruvchi funksiya yozing
+
+def fibbonachi_chiqar(n):
+    a, b = 0, 1
+    for i in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+n=int(input("Sonni kiriting>>>"))
+a=fibbonachi_chiqar(n)
+print(a)        
