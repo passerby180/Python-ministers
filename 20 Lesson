@@ -1,0 +1,19 @@
+# Istalgancha sonlarni qabul qilib, ularning ko'paytmasini qaytaruvchi funksiya yozing
+
+def kopaytma(*sonlar):
+    yigindi=1
+    for son in sonlar:
+        yigindi*=son
+    return yigindi
+print(kopaytma(5,5,5))        
+
+
+# Talabalar haqidagi ma'lumotlarini lug'at ko'rinishida qaytaruvchi funkisya yozing. Talabaning ismi va familiyasi majburiy argument, qolgan ma'lumotlar esa ixtiyoriy ko'rinishda istalgancha berilishi mumkin bo'lsin.
+
+def malumotnoma(ism,familya,**birnarsa):
+    """Sizga bu funksiya o'quvchilar uchun lig'at yaratib beradi"""
+    birnarsa['ism']=ism
+    birnarsa['familiya']=familya
+    return birnarsa
+oquvchi=malumotnoma("Bahromjon","Qodirov",maktab="100-dium",sinf="B")
+print(oquvchi)        
