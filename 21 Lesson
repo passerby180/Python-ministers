@@ -1,0 +1,58 @@
+# son topish o'yini
+import random as r
+bot=0
+siz=0
+while True:
+    print("\nKeling son topish o'yini o'ynaymiz")
+    a1="\n0 dan 10 gacha son o'yladim topishga harakat qilib ko'ring"
+    a2="\nYana bir bor urunib ko'ring"
+
+    x=0
+    y=0
+    b=r.randint(0,10)
+    while True:
+        if 0==x:
+            print(a1)
+            a=int(input(">>>"))
+        else:
+            print(a2)    
+            a=int(input(">>>"))
+        x+=1
+        if a==b:
+            print(f"\nTOPDINGIZ!. Siz {b} sonini {x} ta urunishda topdingiz!")
+            break
+        elif a>b:
+            print(f"\nMen o'ylagan son {a} dan kichik")  
+        else:
+            print(f"\nMen o'ylagan son {a} dan katta")   
+
+    print("\n0 dan 10 gacha son o'ylang men topishga harakat qilaman")    
+    input("\nDasrur ishlashi uchun biron tugmani bosing")
+    b2=r.randint(0,10)
+    while True:
+        print(f"\nSiz o'ylagan son {b2}, agar tog'ri bolsa (T), katta bolsa (+), kichik bolsa (-)")
+        i=input(">>>").lower()
+        y+=1
+        if i == "t":
+            print(f"\nYaxshi. Men {y} ta urunishda topdim")
+            break
+        elif i == "+":
+            b2+=r.randint(1,2)   
+        elif i=="-":
+            b2-=r.randint(1,2)
+
+    if x==y:
+        print(f"\nDurrang siz ham men ham {x} ta urunishda topdik")
+        bot+=1
+        siz+=1
+    elif x<y:
+        print(f"\nSiz {x} ta urunishda\n Men {y} ta urunishda \nQoyil siz meni yutdingiz meni yutish oson emas")            
+        siz+=1
+    elif x>y:
+        bot+=1
+        print(f"\nSiz {x} ta urunishda\nMen {y} ta urunishda \nMen yutdim siz ham yomon o'ynamadingiz")      
+    print(f"Xisob Siz {siz}:{bot} Bot")
+    tanlov = input("\nYana o‘ynaysizmi? (ha/yo‘q): ").lower()
+    if tanlov != "ha":
+        print("\nO‘yin tugadi. Rahmat!")
+        break
