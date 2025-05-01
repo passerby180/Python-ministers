@@ -1,0 +1,61 @@
+import random as r
+sozlar = [
+    "kitob", "daraxt", "oy", "quyosh", "suv", "maktab", "dars", "qalam", "defter", "kompyuter",
+    "telefon", "ko'z", "quloq", "burun", "og'iz", "yuz", "soch", "oyoq", "qo'l", "bosh",
+    "uy", "hovli", "eshik", "deraza", "stol", "stul", "kitobxona", "kutubxona", "xonadon", "mehmon",
+    "oila", "ota", "ona", "aka", "uka", "opa", "singil", "bobo", "buvi", "bola",
+    "yigit", "qiz", "do'st", "o'rtoq", "hamkasb", "ustoz", "shogird", "talaba", "o'qituvchi", "direktor",
+    "hayot", "o'lim", "baxt", "g'am", "shodlik", "quvonch", "yig'i", "kulgi", "kayfiyat", "yurak",
+    "muhabbat", "sevgi", "nafrat", "yomonlik", "yaxshilik", "orzu", "umid", "niyat", "hayol", "xayol",
+    "fikr", "aql", "bilim", "ilm", "donolik", "aqlli", "ahmoq", "mehr", "rahm", "kechirim",
+    "qor", "yomg'ir", "shamol", "bulut", "osmon", "yer", "tog'", "vodiy", "cho'l", "o‘rmon",
+    "daryo", "ko'l", "buloq", "suv", "yer", "tuproq", "giyoh", "gul", "meva", "sabzavot",
+    "non", "osh", "sho'rva", "go'sht", "tovuq", "tuxum", "qatiq", "sut", "pishloq", "asal",
+    "qand", "shakar", "choy", "qahva", "meva", "olma", "nok", "uzum", "anor", "shaftoli",
+    "gilos", "olxo'ri", "banan", "apelsin", "limon", "mandarin", "tarvuz", "qovun", "sabzi", "kartoshka",
+    "piyoz", "sarimsoq", "bodring", "pomidor", "qalampir", "no'xat", "loviya", "guruch", "bug'doy", "arpa",
+    "makka", "mashina", "avtobus", "poyezd", "samolyot", "kema", "velosiped", "yo'l", "ko'cha", "shahar",
+    "qishloq", "mahalla", "viloyat", "respublika", "davlat", "xalq", "millat", "til", "madaniyat", "tarix",
+    "kelajak", "hozir", "o'tmish", "ertaga", "bugun", "kecha", "tong", "peshin", "oqshom", "tun",
+    "hafta", "oy", "yil", "asr", "daqiq", "soat", "soniya", "vaqt", "muddat", "bayram"
+]
+
+def rsoz():
+    return sozlar[r.randint(0,len(sozlar))]
+    
+soz=rsoz().upper()
+def javob():
+    urunish=[]
+    harflar=[]
+    print(f"Men o'ylagan soz {len(soz)} ta harfdan iborat")
+    for i in range(len(soz)):
+        harflar.append('-')
+    while True:
+        for harf in harflar:
+            print(harf,end='')
+        javobi=input("\nBiron harf kiriting>>>").upper()
+        for ur in urunish:
+            if javobi == ur:
+                print(f'\nSiz {ur.upper()} harfini oldin kiritgansiz')
+        urunish.append(javobi)
+        n=0
+        t=False
+        for so in soz:
+            if so == javobi:
+                harflar[n]=javobi
+                t=True
+                n+=1
+            else:
+                n+=1 
+        if t:
+            print(f"Tog'ri {javobi} harf mavjud!") 
+        else:
+            print(f"Noto'g'ri bu {javobi} mavjud emas!")           
+        b=''.join(urunish)
+        print(f"\nSiz kiritgan harflar {b.upper()}")        
+        harfla=''.join(harflar)
+        if soz == harfla:
+            print('Siz to\'g\'ri so\'zni topdingiz!!!')
+            break
+        
+javob()
