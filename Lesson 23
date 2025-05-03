@@ -1,0 +1,19 @@
+class User:
+    def __init__(self,nik,ism,email,nomer,login,parol):
+        self.nik=nik
+        self.ism=ism
+        self.email=email
+        self.nomer=nomer
+        self.login=login
+        self.parol=parol
+    def get_info(self):
+        return f"Foydalanuvchi: {self.nik} \nIsmi: {self.ism} \nEmail: {self.email}"
+    def kirish(self):
+        login=input("Loginingizni kiriting: ") 
+        parol=input("Parolingizni kititing: ")
+        if login == self.login and parol == self.parol:
+            return f"\nFoydalanuvchi haqida malumot: \nTarmoqdagi ismi: {self.nik} \nIsmi: {self.ism} \nEmail manzili: {self.email} \nTelefom raqami: {self.nomer}"
+              
+user1=User("Passerby18","Bahromjom","bahromjon@gmail.com","+998931234567","qwert123","88888888")
+print(user1.get_info())    
+print(user1.kirish())    
