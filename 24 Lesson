@@ -1,0 +1,54 @@
+class Avto:
+    def __init__(self,model,rang,karobka,narx):
+        self.model=model
+        self.rang=rang
+        self.karobka=karobka
+        self.narx=narx
+        self.kilometr=0
+    def get_info(self):
+        return f"Modeli {self.model}, rangi {self.rang}, karobka {self.karobka}, yurgan {self.kilometr}, narxi {self.narx}$"  
+    
+    def uptade_km(self,yurgan):
+        """(yurgan)"""
+        self.kilometr=yurgan
+
+
+avto1=Avto("Nexia","oq","aftomat",4000)
+print(avto1.get_info())
+       
+avto1.uptade_km(5000) 
+print(avto1.get_info())       
+
+
+
+
+class Avtosalon:
+    def __init__(self,nomi):
+        self.nomi=nomi
+        self.manzil="Andijon"
+        self.avtolar=[]
+        self.avtolar_soni=0
+    
+    def set_avto(self,avto):
+        self.avtolar.append(avto)
+        self.avtolar_soni+=1
+    
+    def get_avto_info(self):
+        return [avto.get_info() for avto in self.avtolar]
+
+my_salon=Avtosalon("My afto salon")    
+my_salon.set_avto(avto1)    
+
+print(my_salon.get_avto_info())
+
+print(dir(Avto))
+print(" ")
+print(dir(Avtosalon))
+print(" ")
+print(dir(int))
+print(" ")
+print(dir(float))
+print(" ")
+print(dir(bool))
+print(" ")
+print(dir(str))
